@@ -5,7 +5,9 @@ import "github.com/akmalsulaymonov/alif-bank/v2/pkg/types"
 func Avg(payments []types.Payment) types.Money {
 	var sum types.Money
 	for _, item := range payments {
-		sum += item.Amount
+		if item.Status != "FAIL" {
+			sum += item.Amount
+		}
 	}
 	return sum / types.Money(len(payments))
 }
@@ -13,7 +15,7 @@ func Avg(payments []types.Payment) types.Money {
 func TotalInCategory(payments []types.Payment, category types.Category) types.Money {
 	var sum types.Money
 	for _, item := range payments {
-		if item.Category == category {
+		if item.Category == category && item.Status != "FAIL" {
 			sum += item.Amount
 		}
 	}
