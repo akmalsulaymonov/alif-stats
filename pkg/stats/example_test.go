@@ -17,7 +17,7 @@ func Example_Stats() {
 	avg := Avg(payments)
 	total := TotalInCategory(payments, "food")
 	fmt.Println(avg)
-	fmt.Println(total)
+	fmt.Println(total)  
 
 	// output:
 	// 500000
