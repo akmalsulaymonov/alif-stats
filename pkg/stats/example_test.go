@@ -8,10 +8,10 @@ import (
 
 func Example_Stats() {
 	payments := []types.Payment{
-		{ID: 1111, Amount: 10_000_00, Category: "food"},
-		{ID: 2222, Amount: 3_000_00, Category: "car"},
-		{ID: 3333, Amount: 10_000_00, Category: "chemist"},
-		{ID: 4444, Amount: 7_000_00, Category: "food"},
+		{ID: 1111, Amount: 10_000_00, Category: "food", Status: "FAIL"},
+		{ID: 2222, Amount: 3_000_00, Category: "car", Status: "OK"},
+		{ID: 3333, Amount: 10_000_00, Category: "chemist", Status: "OK"},
+		{ID: 4444, Amount: 7_000_00, Category: "food", Status: "INPROGRESS"},
 	}
 
 	avg := Avg(payments)
@@ -20,6 +20,6 @@ func Example_Stats() {
 	fmt.Println(total)
 
 	// output:
-	// 750000
-	// 1700000
+	// 500000
+	// 700000
 }
