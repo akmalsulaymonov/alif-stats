@@ -1,6 +1,6 @@
 package stats
 
-import "github.com/akmalsulaymonov/alif-bank/pkg/types"
+import "github.com/akmalsulaymonov/alif-bank/v2/pkg/types"
 
 func Avg(payments []types.Payment) types.Money {
 	var sum types.Money

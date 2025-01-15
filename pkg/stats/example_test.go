@@ -3,7 +3,7 @@ package stats
 import (
 	"fmt"
 
-	"github.com/akmalsulaymonov/alif-bank/pkg/types"
+	"github.com/akmalsulaymonov/alif-bank/v2/pkg/types"
 )
 
 func Example_Stats() {
